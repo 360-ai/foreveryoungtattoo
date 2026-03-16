@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Datenschutzerklärung – Forever Young Tattoo Atelier</title>
+  <style>
+    @font-face { font-family:'Lobster'; src:url('fonts/Lobster-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'Lilita One'; src:url('fonts/LilitaOne-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-Light.ttf') format('truetype'); font-weight:300; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-Medium.ttf') format('truetype'); font-weight:500; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-SemiBold.ttf') format('truetype'); font-weight:600; font-display:swap; }
+    :root {
+      --bg:#1a1008; --bg2:#221508; --bg3:#2c1c0a; --panel:#120b04;
+      --sun:#FFC200; --outline:#6b1500; --outline2:#8b2000; --rust:#c43d0a;
+      --cream:#f5e8c8; --tan:#c8a870; --muted:#7a6040; --faint:#3a2810;
+      --sun-line:rgba(255,194,0,0.28);
+      --f-script:'Lobster',cursive; --f-round:'Lilita One',cursive; --f-sans:'Montserrat',sans-serif;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--cream);font-family:var(--f-sans);font-weight:300;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px 160px}
+    .desert-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('images/desert.png') center 55%/cover no-repeat;filter:brightness(.3) saturate(.4) sepia(.35);opacity:.05}
+    a{text-decoration:none;color:inherit}
+    nav{position:fixed;inset:0 0 auto;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(18,11,4,0.97);border-bottom:2px solid var(--outline2)}
+    nav::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sun-line),transparent)}
+    .nav-brand{display:flex;align-items:center}
+    .nav-brand img{height:46px;width:auto;object-fit:contain;display:block}
+    .page{max-width:760px;margin:0 auto;padding:100px 36px 80px;position:relative;z-index:1;flex:1}
+    .back{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:500;color:var(--muted);margin-bottom:40px;transition:color .25s;letter-spacing:.08em}
+    .back:hover{color:var(--sun)}
+    .page-badge{font-size:.6rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--sun);margin-bottom:12px;display:block;opacity:.75}
+    h1{font-family:var(--f-script);font-size:clamp(2rem,5vw,3.2rem);color:var(--sun);-webkit-text-stroke:1.5px var(--outline);text-shadow:2px 3px 8px rgba(30,8,0,.5);margin-bottom:8px}
+    .updated{font-size:.72rem;color:var(--muted);margin-bottom:40px}
+    .divider{width:120px;height:2px;margin:16px 0 40px;background:linear-gradient(90deg,transparent,var(--outline2),var(--sun),var(--outline2),transparent)}
+    h2{font-family:var(--f-round);font-size:.88rem;color:var(--sun);letter-spacing:.1em;text-shadow:1px 1px 0 var(--outline);margin:32px 0 10px;text-transform:uppercase}
+    h3{font-size:.85rem;font-weight:600;color:var(--cream);margin:20px 0 8px}
+    p,address{font-size:.9rem;color:var(--tan);line-height:1.85;font-style:normal;margin-bottom:10px}
+    p a{color:var(--sun);border-bottom:1px solid var(--faint);transition:border-color .25s}
+    p a:hover{border-color:var(--sun)}
+    ul{padding-left:20px;margin-bottom:12px}
+    li{font-size:.9rem;color:var(--tan);margin-bottom:6px;line-height:1.7}
+    li strong{color:var(--cream);font-weight:500}
+    .section{border-bottom:1px solid var(--faint);padding-bottom:28px;margin-bottom:28px}
+    .section:last-of-type{border-bottom:none}
+    .legal-basis{display:inline-block;background:rgba(255,194,0,0.1);color:var(--sun);font-size:.65rem;font-weight:600;padding:2px 8px;border-radius:3px;border:1px solid rgba(255,194,0,0.2);margin-left:6px;vertical-align:middle;letter-spacing:.04em}
+    footer{background:var(--panel);border-top:2px solid var(--outline2);padding:24px 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;position:relative;z-index:1}
+    .fn-s{font-family:var(--f-script);font-size:1.3rem;color:var(--sun);-webkit-text-stroke:1px var(--outline)}
+    .fn-r{font-family:var(--f-round);font-size:.85rem;color:var(--sun);-webkit-text-stroke:1px var(--outline)}
+    .fc{font-size:.72rem;color:var(--muted)}
+    .fl{display:flex;gap:20px}
+    .fl a{font-size:.72rem;color:var(--muted);transition:color .25s}
+    .fl a:hover{color:var(--sun)}
+  </style>
+</head>
+<body>
+<div class="desert-bg" aria-hidden="true"></div>
+
+<nav>
+  <a href="forever-young-tattoo.html" class="nav-brand">
+    <img src="images/logo-tabea.png" alt="Tabea Scholz Tätowierungen"/>
+  </a>
+</nav>
+
+<div class="page">
+  <a href="forever-young-tattoo.html" class="back">&#8592; Zurück zur Website</a>
+
+  <span class="page-badge">Rechtliches</span>
+  <h1>Datenschutz</h1>
+  <div class="divider"></div>
+
+  <div class="section">
+    <h2>1. Verantwortlicher</h2>
+    <p>Verantwortliche im Sinne der DSGVO für die Datenverarbeitung auf dieser Website ist:</p>
+    <p>
+      <strong>Forever Young Tattoo Atelier</strong><br>
+      Tabea Scholz<br>
+      Bahnhofstraße 30, 35066 Frankenberg (Eder)<br>
+      Telefon: 0151 2042 7995<br>
+      E-Mail: info@foreveryoung-tattoo.de
+    </p>
+    <p>
+      Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten,
+      bei Auskünften, Berichtigung, Sperrung oder Löschung von Daten wenden Sie sich bitte an die oben genannte Adresse.
+    </p>
+  </div>
+
+  <div class="section">
+  <h2>2. Hosting</h2>
+  <h3>Cloudflare (Hosting und Sicherheitsfunktionen)</h3>
+  <p>
+    Diese Website wird über Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA gehostet
+    und über ein Content-Delivery- und Sicherheitsnetzwerk (CDN/WAF) ausgeliefert.
+    Cloudflare ist unter dem EU-US Data Privacy Framework zertifiziert.
+  </p>
+  <p>
+    Beim Aufruf der Website werden durch Cloudflare technisch notwendige Daten in sogenannten
+    Server-Logfiles verarbeitet. Dazu können insbesondere gehören:
+  </p>
+  <ul>
+    <li>IP-Adresse in gekürzter/abgeleiteter Form</li>
+    <li>Datum und Uhrzeit der Anfrage</li>
+    <li>aufgerufene URL und Referer-URL (zuvor besuchte Seite)</li>
+    <li>übertragene Datenmenge</li>
+    <li>Browsertyp und Browserversion</li>
+    <li>verwendetes Betriebssystem</li>
+  </ul>
+  <p>
+    Die Logdaten werden in der Regel für wenige Tage bis maximal einige Wochen gespeichert
+    und anschließend automatisch gelöscht, sofern keine sicherheitsrelevante Auswertung
+    (z. B. bei Angriffsmustern) erforderlich ist.
+  </p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren und stabilen Betrieb der Website). <span class="legal-basis">Art. 6 I f DSGVO</span></p>
+  <p>Weitere Informationen: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></p>
+  </div>
+
+  <div class="section">
+  <h2>3. Kontaktaufnahme</h2>
+  <p>
+    Wenn Sie uns über WhatsApp, Instagram oder andere Kanäle kontaktieren,
+    werden die von Ihnen angegebenen Daten (Name, Nachricht, ggf. Telefonnummer)
+    zur Bearbeitung Ihrer Anfrage und für eventuelle Anschlussfragen bei uns gespeichert.
+  </p>
+  <p>Die Verarbeitung erfolgt auf Grundlage Ihrer freiwillig erteilten Einwilligung. <span class="legal-basis">Art. 6 I a DSGVO</span></p>
+  <p>
+    Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen,
+    indem Sie uns unter der im Impressum genannten E-Mail-Adresse kontaktieren.
+  </p>
+  <h3>WhatsApp</h3>
+  <p>
+    Für die Kommunikation über WhatsApp nutzen wir den Dienst WhatsApp des Anbieters
+    Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.
+    Es kann dabei zu einer Übermittlung von Metadaten (z. B. IP-Adresse, Geräteinformationen)
+    an Server der Meta-Unternehmensgruppe in Drittländer (insbesondere USA) kommen.
+  </p>
+  <p>
+    Bitte nutzen Sie WhatsApp nur, wenn Ihnen die damit verbundene Datenverarbeitung
+    bei Meta bekannt ist und Sie damit einverstanden sind. Alternativ können Sie uns
+    jederzeit per E-Mail kontaktieren.
+  </p>
+  <p>Weitere Informationen: <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy-eea</a></p>
+  <h3>Instagram</h3>
+  <p>
+    Unser Profil <strong>@foreveryoung.tattoo</strong> wird auf der Plattform Instagram
+    der Meta Platforms Ireland Limited betrieben. Beim Besuch unseres Profils oder bei
+    einer Direktnachricht an uns verarbeitet Meta personenbezogene Daten eigenverantwortlich.
+    Dabei kann es auch zu einer Übermittlung in Drittländer (insbesondere USA) kommen.
+  </p>
+  <p>
+    Wir verarbeiten die von Ihnen direkt über Instagram übermittelten Daten (z. B. Name,
+    Nutzername, Nachrichteninhalte) ausschließlich zur Beantwortung Ihrer Anfrage.
+  </p>
+  <p>Weitere Informationen: <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener">Datenschutzrichtlinie von Instagram</a></p>
+  <h3>Speicherdauer</h3>
+  <p>
+    Ihre Anfragedaten werden nach abgeschlossener Bearbeitung gelöscht,
+    sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+  </p>
+  </div>
+
+  <div class="section">
+    <h2>4. Schriftarten (lokal gehostet)</h2>
+    <p>
+      Diese Website verwendet Webfonts, die <strong>lokal auf unserem Server</strong> gespeichert sind.
+      Es findet keine Verbindung zu externen Servern (z. B. Google Fonts) statt.
+      Bei der Darstellung der Seite werden daher keine personenbezogenen Daten an Dritte übermittelt.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>5. Ihre Rechte</h2>
+    <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
+    <ul>
+      <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO)</li>
+      <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO)</li>
+      <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO)</li>
+      <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
+      <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+      <li><strong>Widerspruchsrecht</strong> gegen die Verarbeitung (Art. 21 DSGVO)</li>
+      <li><strong>Recht auf Widerruf</strong> einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
+    </ul>
+    <p>
+      Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung
+      Ihrer personenbezogenen Daten durch uns zu beschweren.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>6. SSL-Verschlüsselung</h2>
+    <p>
+      Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte
+      eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die
+      Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol
+      in Ihrer Browserzeile.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:baseline;gap:6px">
+    <span class="fn-s">Forever</span><span class="fn-r">Young</span>
+    <span style="font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-family:var(--f-sans);margin-left:8px">Tattoo Atelier</span>
+  </div>
+  <span class="fc">© 2026 Forever Young Tattoo Atelier · Tabea Scholz</span>
+  <div class="fl"><a href="agb.html">AGB</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+</footer>
+</body>
+</html>

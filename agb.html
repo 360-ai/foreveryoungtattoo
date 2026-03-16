@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGB – Forever Young Tattoo Atelier</title>
+  <style>
+    @font-face { font-family:'Lobster'; src:url('fonts/Lobster-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'Lilita One'; src:url('fonts/LilitaOne-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-Light.ttf') format('truetype'); font-weight:300; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-Medium.ttf') format('truetype'); font-weight:500; font-display:swap; }
+    @font-face { font-family:'Montserrat'; src:url('fonts/Montserrat-SemiBold.ttf') format('truetype'); font-weight:600; font-display:swap; }
+    :root {
+      --bg:#1a1008; --bg2:#221508; --bg3:#2c1c0a; --panel:#120b04;
+      --sun:#FFC200; --outline:#6b1500; --outline2:#8b2000; --rust:#c43d0a;
+      --cream:#f5e8c8; --tan:#c8a870; --muted:#7a6040; --faint:#3a2810;
+      --sun-line:rgba(255,194,0,0.28);
+      --f-script:'Lobster',cursive; --f-round:'Lilita One',cursive; --f-sans:'Montserrat',sans-serif;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--cream);font-family:var(--f-sans);font-weight:300;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px 160px}
+    .desert-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('images/desert.png') center 55%/cover no-repeat;filter:brightness(.3) saturate(.4) sepia(.35);opacity:.05}
+    a{text-decoration:none;color:inherit}
+    nav{position:fixed;inset:0 0 auto;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(18,11,4,0.97);border-bottom:2px solid var(--outline2)}
+    nav::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sun-line),transparent)}
+    .nav-brand{display:flex;align-items:center}
+    .nav-brand img{height:46px;width:auto;object-fit:contain;display:block}
+    .page{max-width:760px;margin:0 auto;padding:100px 36px 80px;position:relative;z-index:1;flex:1}
+    .back{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:500;color:var(--muted);margin-bottom:40px;transition:color .25s;letter-spacing:.08em}
+    .back:hover{color:var(--sun)}
+    .page-badge{font-size:.6rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--sun);margin-bottom:12px;display:block;opacity:.75}
+    h1{font-family:var(--f-script);font-size:clamp(2rem,5vw,3.2rem);color:var(--sun);-webkit-text-stroke:1.5px var(--outline);text-shadow:2px 3px 8px rgba(30,8,0,.5);margin-bottom:8px}
+    .divider{width:120px;height:2px;margin:16px 0 40px;background:linear-gradient(90deg,transparent,var(--outline2),var(--sun),var(--outline2),transparent)}
+    h2{font-family:var(--f-round);font-size:.88rem;color:var(--sun);letter-spacing:.1em;text-shadow:1px 1px 0 var(--outline);margin:32px 0 10px;text-transform:uppercase}
+    p{font-size:.9rem;color:var(--tan);line-height:1.85;margin-bottom:10px}
+    p strong{color:var(--cream);font-weight:500}
+    p a{color:var(--sun);border-bottom:1px solid var(--faint);transition:border-color .25s}
+    p a:hover{border-color:var(--sun)}
+    ul{padding-left:20px;margin-bottom:12px}
+    li{font-size:.9rem;color:var(--tan);margin-bottom:6px;line-height:1.7}
+    .section{border-bottom:1px solid var(--faint);padding-bottom:28px;margin-bottom:28px}
+    .section:last-of-type{border-bottom:none}
+    footer{background:var(--panel);border-top:2px solid var(--outline2);padding:24px 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;position:relative;z-index:1}
+    .fn-s{font-family:var(--f-script);font-size:1.3rem;color:var(--sun);-webkit-text-stroke:1px var(--outline)}
+    .fn-r{font-family:var(--f-round);font-size:.85rem;color:var(--sun);-webkit-text-stroke:1px var(--outline)}
+    .fc{font-size:.72rem;color:var(--muted)}
+    .fl{display:flex;gap:20px}
+    .fl a{font-size:.72rem;color:var(--muted);transition:color .25s}
+    .fl a:hover{color:var(--sun)}
+  </style>
+</head>
+<body>
+<div class="desert-bg" aria-hidden="true"></div>
+
+<nav>
+  <a href="forever-young-tattoo.html" class="nav-brand">
+    <img src="images/logo-tabea.png" alt="Tabea Scholz Tätowierungen"/>
+  </a>
+</nav>
+
+<div class="page">
+  <a href="forever-young-tattoo.html" class="back">&#8592; Zurück zur Website</a>
+
+  <span class="page-badge">Rechtliches</span>
+  <h1>AGB</h1>
+  <div class="divider"></div>
+
+  <div class="section">
+    <h2>§ 1 Geltungsbereich</h2>
+    <p>
+      Diese Allgemeinen Geschäftsbedingungen gelten für alle Dienstleistungen des Forever Young Tattoo Ateliers,
+      Inhaberin Tabea Scholz (nachfolgend „Tätowiererin"), gegenüber ihren Kunden.
+    </p>
+    <p>
+      Abweichende Bedingungen des Kunden werden nicht anerkannt, sofern die Tätowiererin
+      diesen nicht ausdrücklich schriftlich zugestimmt hat.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>§ 2 Terminvereinbarung</h2>
+    <p>
+      Termine werden ausschließlich nach vorheriger Vereinbarung vergeben.
+      Eine Terminvereinbarung ist verbindlich und stellt einen Vertrag über die zu erbringende
+      Dienstleistung dar.
+    </p>
+    <p>
+      Bei Verhinderung ist der Termin mindestens <strong>48 Stunden</strong> vorher abzusagen.
+      Bei kurzfristiger Absage oder Nichterscheinen kann eine Ausfallpauschale in Höhe von
+      bis zu 50 % des vereinbarten Preises erhoben werden.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>§ 3 Voraussetzungen</h2>
+    <p>Der Kunde bestätigt mit der Terminbuchung, dass er:</p>
+    <ul>
+      <li>mindestens 18 Jahre alt ist (Ausweispflicht)</li>
+      <li>zum Zeitpunkt des Termins nüchtern ist (kein Alkohol, keine Drogen)</li>
+      <li>nicht unter blutverdünnenden Medikamenten steht</li>
+      <li>über relevante Hauterkrankungen, Allergien oder gesundheitliche Einschränkungen informiert hat</li>
+    </ul>
+    <p>
+      Die Tätowiererin behält sich vor, den Termin abzulehnen, wenn die genannten
+      Voraussetzungen nicht erfüllt sind.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>§ 4 Preise und Zahlung</h2>
+    <p>
+      Preise werden individuell nach Motiv, Größe und Aufwand vereinbart.
+      Es gelten die zum Zeitpunkt der Terminvereinbarung besprochenen Preise.
+    </p>
+    <p>
+      Die Zahlung erfolgt unmittelbar nach Fertigstellung des Tattoos in bar oder per EC-Karte,
+      sofern nicht anders vereinbart.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>§ 5 Motivgestaltung und Urheberrecht</h2>
+    <p>
+      Alle Entwürfe und Vorlagen sind urheberrechtlich geschützt und dürfen ohne ausdrückliche
+      Genehmigung der Tätowiererin nicht vervielfältigt, weitergegeben oder anderweitig verwendet werden.
+    </p>
+    <p>
+      Individuelle Entwürfe werden für den jeweiligen Kunden angefertigt.
+      Änderungswünsche sind bis zum Tattoo-Termin möglich — größere Umarbeitungen können
+      zusätzliche Kosten verursachen.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>§ 6 Nachstechen</h2>
+    <p>
+      Sollte ein kostenfreies Nachstechen erforderlich sein, muss dies innerhalb von
+      <strong>3 Monaten</strong> nach dem ursprünglichen Termin erfolgen.
+      Voraussetzung ist die ordnungsgemäße Pflege des Tattoos gemäß den mündlich und/oder
+      schriftlich erteilten Pflegehinweisen.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>§ 7 Haftung</h2>
+    <p>
+      Die Tätowiererin arbeitet nach den höchsten hygienischen Standards.
+      Eine Haftung für gesundheitliche Beeinträchtigungen, die auf mangelnde Pflege des Kunden
+      oder nicht mitgeteilte gesundheitliche Einschränkungen zurückzuführen sind,
+      ist ausgeschlossen.
+    </p>
+    <p>
+      Der Kunde wird vor dem Termin über mögliche Risiken aufgeklärt und bestätigt dies
+      mit seiner Unterschrift auf der Einverständniserklärung.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>§ 8 Schlussbestimmungen</h2>
+    <p>
+      Sollten einzelne Bestimmungen dieser AGB unwirksam sein, so wird die Wirksamkeit
+      der übrigen Bestimmungen hiervon nicht berührt.
+    </p>
+    <p>Es gilt das Recht der Bundesrepublik Deutschland.</p>
+    <p style="margin-top:24px;color:var(--muted);font-size:.78rem">Stand: März 2026</p>
+  </div>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:baseline;gap:6px">
+    <span class="fn-s">Forever</span><span class="fn-r">Young</span>
+    <span style="font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-family:var(--f-sans);margin-left:8px">Tattoo Atelier</span>
+  </div>
+  <span class="fc">© 2026 Forever Young Tattoo Atelier · Tabea Scholz</span>
+  <div class="fl"><a href="agb.html">AGB</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+</footer>
+</body>
+</html>
